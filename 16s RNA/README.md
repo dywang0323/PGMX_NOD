@@ -13,7 +13,7 @@ qiime tools import \
 ```
 qiime demux summarize \
  --i-data /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/demux-paired.qza \
- --o-visualization /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/demux-paired.qzv
+ --o-visualization /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/demux-paired.qzv \
  --verbose
 ```
 
