@@ -16,4 +16,16 @@ qiime demux summarize \
  --o-visualization /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/demux-paired.qzv \
  --verbose
 ```
-
+## Denoise and Remove Chimeras
+```
+export TMPDIR=/ourdisk/hpc/prebiotics/dywang/tmp
+mkdir -p $TMPDIR
+TMPDIR=/ourdisk/hpc/prebiotics/dywang/tmp qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/demux-paired.qza \
+  --p-trunc-len-f 250 \
+  --p-trunc-len-r 200 \
+  --o-table /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/table.qza \
+  --o-representative-sequences /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/rep-seqs.qza \
+  --o-denoising-stats /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/denoising-stats.qza \
+  --verbose
+```
