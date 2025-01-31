@@ -31,3 +31,15 @@ mkdir -p $TMPDIR
   --p-n-reads-learn 100000 \
   --verbose
 ```
+# Taxonomic Classification  
+## 1). Download SILVA Classifier:  
+```
+wget https://data.qiime2.org/2023.9/common/silva-138-99-nb-classifier.qza
+```
+## 2). Classify Sequences: 
+```
+qiime feature-classifier classify-sklearn \
+  --i-classifier /ourdisk/hpc/prebiotics/dywang/Software/silva-138-99-nb-classifier.qza \
+  --i-reads /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/rep-seqs.qza \
+  --o-classification /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/taxonomy.qza
+```
