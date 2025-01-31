@@ -27,5 +27,7 @@ TMPDIR=/ourdisk/hpc/prebiotics/dywang/tmp qiime dada2 denoise-paired \
   --o-table /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/table.qza \
   --o-representative-sequences /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/rep-seqs.qza \
   --o-denoising-stats /ourdisk/hpc/prebiotics/dywang/Projects/HSC/Genome/16S/QIIME2/denoising-stats.qza \
+  --p-n-threads 20 \  
+  --p-n-reads-learn 100000 \  
   --verbose
 ```
